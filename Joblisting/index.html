@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="icon" href="./assets/logo.png">
+        <link rel="stylesheet" href="style.css">
+        <title>Job Portal</title>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="nav-links">
+                <a href="index.html">Jobs</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="logo">
+                <img onclick="location.href='index.html'" src="#" alt="LOGO" />
+            </div>
+            <div class="nav-buttons">
+                <button id="login-button" onclick="openLoginForm()">Login</button>
+                <button id="signup-button" onclick="openSignupForm()">Sign up</button>
+            </div>
+        </div>
+        <div id="login-area">
+            <div class="login-form">
+                <form onsubmit = "return validatelogin()" action="login.php" method="post">
+                    <img src="assets/close.png" id="close-form" alt="X Close" onclick="closeLoginForm()">
+                    <h2>Login</h2>
+                    <label for="email"><h3>Email</h3></label>
+                    <input type="email" name="email" id="login-email" placeholder="Enter your active Email ID">
+                    <label for="password"><h3>Password</h3></label>
+                    <input type="password" name="password" id="password" placeholder="Enter your password">
+                    <a href="#" id="forgot"><h6>Forgot password?</h6></a>
+                    <button type="submit" class="login-button login">Login</button>
+                    <br>
+                    <button type="submit" class="login-button use-otp">Use OTP to login</button>
+                    <hr>
+                    <button type="submit" class="login-google login-button"><img src="assets/google-logo.png" alt="google-logo" />Sign in with Google</button>
+                </form>
+            </div>
+        </div>
+        <div id="signup-area">
+            <div class="signup-form">
+                <form onsubmit="return validatesignup()" action="register.php" method="post">
+                    <img src="assets/close.png" id="close-form" alt="X Close" onclick="closeSignupForm()">
+                    <h2>Signup</h2>
+                    <label for="uname"><h3>Full Name</h3></label>
+                    <input type="text" name="uname" id="uname" placeholder="What is you name?">
+                    <label for="email"><h3>Email</h3></label>
+                    <input type="email" name="email" id="signup-email" placeholder="Enter your active Email ID">
+                    <label for="password"><h3>Password</h3></label>
+                    <input type="password" name="password" id="password" placeholder="Enter your password">
+                    <button type="submit" class="login-button signup">Login</button>
+                    <hr>
+                    <button type="submit" class="login-google login-button"><img src="assets/google-logo.png" alt="google-logo" />Sign in with Google</button>
+                </form>
+            </div>
+        </div>
+        <script>
+            function openLoginForm() {
+                document.getElementById("login-area").style.display = "flex";
+                document.body.style.overscrollBehavior = "none";
+            }
+            
+            function closeLoginForm() {
+                document.getElementById("login-area").style.display = "none";
+                document.body.style.overscrollBehavior = "auto";
+                document.body.style.overscrollBehaviorX = "none";
+            }
+
+            function openSignupForm() {
+                document.getElementById("signup-area").style.display = "flex";
+                document.body.style.overscrollBehavior = "none";
+            }
+            
+            function closeSignupForm() {
+                document.getElementById("signup-area").style.display = "none";
+                document.body.style.overscrollBehavior = "auto";
+                document.body.style.overscrollBehaviorX = "none";
+            }
+        </script>
+        <div class="main">
+            <div class="search-area">
+                <div class="search-img">
+                    <img src="./assets/man-on-desk.png" />
+                </div>
+                <div class="search-bar">
+                    <div class="search-input">
+                        <input type="text" placeholder="Search skill / designation / companies"><button class="search-button">Search</button>
+                    </div>
+                    <h1>Find Your Dream Job Now !</h1>
+                </div>
+            </div>
+            <div class="companies">
+                <div class="hiring">Top<br />Companies<br />Are Hiring<br />Now</div>
+                <div class="card-space">
+                    <div class="card-container">
+                        <div onclick="location.href='google.html'" class="card"><img src="assets/google-logo.png" alt="logo" class="card-logo" />Google</div>
+                        <div onclick="location.href='steam.html'" class="card"><img src="assets/steam-logo.png" alt="logo" class="card-logo" />Steam</div>
+                        <div onclick="location.href='ibm.html'" class="card"><img src="assets/ibm-logo.png" alt="logo" class="card-logo" /></div>
+                        <div onclick="location.href='mastercard.html'" class="card" style="font-size: 1.5rem;"><img src="assets/mastercard-logo.png" alt="logo" class="card-logo" />MasterCard</div>
+                        <div onclick="location.href='amd.html'" class="card"><img src="assets/amd-logo.png" alt="logo" class="card-logo" />AMD</div>
+                        <div onclick="location.href='netflix.html'" class="card"><img src="assets/netflix-logo.png" alt="logo" class="card-logo" />Netflix</div>
+                    </div>
+                </div>
+            </div>
+            <div class="jobs">
+                <div class="role">
+                    <div class="role-card" onclick="location.href='fullstack.html'">
+                        <div class="role-name">Full Stack Developer</div>
+                        <div class="job-count">
+                            <div>19.6k+ jobs</div>
+                            <div><img src="assets/forward_icon.png" alt=">"></div>
+                        </div>
+                    </div>
+                    <div class="role-card" onclick="location.href='app.html'">
+                        <div class="role-name">Mobile / App Dev</div>
+                        <div class="job-count">
+                            <div>2.6k+ jobs</div>
+                            <div><img src="assets/forward_icon.png" alt=">"></div>
+                        </div>
+                    </div>
+                    <div class="role-card" onclick="location.href='devops.html'">
+                        <div class="role-name">DevOps Engineer</div>
+                        <div class="job-count">
+                            <div>9.1k+ jobs</div>
+                            <div><img src="assets/forward_icon.png" alt=">"></div>
+                        </div>
+                    </div>
+                    <div class="role-card" onclick="location.href='cyber.html'">
+                        <div class="role-name">Cyber Security</div>
+                        <div class="job-count">
+                            <div>1.3k+ jobs</div>
+                            <div><img src="assets/forward_icon.png" alt=">"></div>
+                        </div>
+                    </div>
+                    <div class="role-card" onclick="location.href='technical.html'">
+                        <div class="role-name">Technical Lead</div>
+                        <div class="job-count">
+                            <div>3.3k+ jobs</div>
+                            <div><img src="assets/forward_icon.png" alt=">"></div>
+                        </div>
+                    </div>
+                    <div class="role-card" onclick="location.href='frontend.html'">
+                        <div class="role-name">Front end Developer</div>
+                        <div class="job-count">
+                            <div>5k+ jobs</div>
+                            <div><img src="assets/forward_icon.png" alt=">"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="discover">
+                    Discover jobs<br />across popular<br />roles !
+                </div>
+            </div>
+        </div>
+        <script src="validate.js"></script>
+    </body>
+</html>

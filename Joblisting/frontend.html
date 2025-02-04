@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="icon" href="./assets/logo.png">
+        <link rel="stylesheet" href="style-jobs.css">
+        <title>Job Portal</title>
+    </head>
+    <body>
+        <div class="set">
+        <div class="navbar">
+            <div class="nav-links">
+                <a href="index.html">Jobs</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="logo">
+                <img onclick="location.href='index.html'" src="#" alt="LOGO" />
+            </div>
+            <div class="nav-buttons">
+                <button id="login-button" onclick="openLoginForm()">Login</button>
+                <button id="signup-button" onclick="openSignupForm()">Sign up</button>
+            </div>
+        </div>
+        <div id="login-area">
+            <div class="login-form">
+                <form action="#">
+                    <img src="assets/close.png" id="close-form" alt="X Close" onclick="closeLoginForm()">
+                    <h2>Login</h2>
+                    <label for="email"><h3>Email</h3></label>
+                    <input type="email" name="email" id="login-email" placeholder="Enter your active Email ID">
+                    <label for="password"><h3>Password</h3></label>
+                    <input type="password" name="password" id="password" placeholder="Enter your password">
+                    <a href="#" id="forgot"><h6>Forgot password?</h6></a>
+                    <button type="submit" class="login-button login">Login</button>
+                    <br>
+                    <button type="submit" class="login-button use-otp">Use OTP to login</button>
+                    <hr>
+                    <button type="submit" class="login-google login-button"><img src="assets/google-logo.png" alt="google-logo" />Sign in with Google</button>
+                </form>
+            </div>
+        </div>
+        <div id="signup-area">
+            <div class="signup-form">
+                <form action="#">
+                    <img src="assets/close.png" id="close-form" alt="X Close" onclick="closeSignupForm()">
+                    <h2>Signup</h2>
+                    <label for="uname"><h3>Full Name</h3></label>
+                    <input type="text" name="uname" id="uname" placeholder="What is you name?">
+                    <label for="email"><h3>Email</h3></label>
+                    <input type="email" name="email" id="signup-email" placeholder="Enter your active Email ID">
+                    <label for="password"><h3>Password</h3></label>
+                    <input type="password" name="password" id="password" placeholder="Enter your password">
+                    <button type="submit" class="login-button signup">Login</button>
+                    <hr>
+                    <button type="submit" class="login-google login-button"><img src="assets/google-logo.png" alt="google-logo" />Sign in with Google</button>
+                </form>
+            </div>
+        </div>
+        <script>
+            function openLoginForm() {
+            document.getElementById("login-area").style.display = "flex";
+            }
+            
+            function closeLoginForm() {
+            document.getElementById("login-area").style.display = "none";
+            }
+
+            function openSignupForm() {
+            document.getElementById("signup-area").style.display = "flex";
+            }
+            
+            function closeSignupForm() {
+            document.getElementById("signup-area").style.display = "none";
+            }
+        </script>
+        <div class="job-card">
+            <div class="job-content">
+                <h2 class="job-title">Front End Developer</h2>
+                <div class="company-details">
+                    <img src="assets/google-logo.png" alt="Google Logo" class="company-logo">
+                    <span class="company-name">Google</span>
+                </div>
+                <div class="job-info">
+                    <span>0 - 5 Yrs</span>
+                    <span>15LPA</span>
+                    <span>Delhi, Pune</span>
+                </div>
+                <div class="skills">
+                    <span>Python</span>
+                    <span>Frontend</span>
+                    <span>DEVOPS</span>
+                    <span>AI/ML</span>
+                    <span>MYSQL</span>
+                    <span>Backend</span>
+                </div>
+                <button class="apply-btn">Apply</button>
+            </div>
+        </div>
+        <div class="job-card">
+            <div class="job-content">
+                <h2 class="job-title">Front End Developer</h2>
+                <div class="company-details">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM Logo" class="company-logo">
+                    <span class="company-name">IBM</span>
+                </div>
+                <div class="job-info">
+                    <span>10 - 15 Yrs</span>
+                    <span>30LPA</span>
+                    <span>Surat</span>
+                </div>
+                <div class="skills">
+                    <span>Java</span>
+                    <span>Cloud Computing</span>
+                    <span>DEVOPS</span>
+                    <span>AI</span>
+                    <span>DataScience</span>
+                    <span>Blockchain</span>
+                </div>
+                <button class="apply-btn">Apply</button>
+            </div>
+        </div>
+        <div class="job-card">
+            <div class="job-content">
+                <h2 class="job-title">Front End Developer</h2>
+                <div class="company-details">
+                    <img src="assets/steam-logo.png" alt="IBM Logo" class="company-logo">
+                    <span class="company-name">Steam</span>
+                </div>
+                <div class="job-info">
+                    <span>0 - 3 Yrs</span>
+                    <span>10LPA</span>
+                    <span>Bengaluru</span>
+                </div>
+                <div class="skills">
+                    <span>Game Development</span>
+                    <span>Virtual Reality</span>
+                    <span>Animation</span>
+                    <span>E-Commerce</span>
+                    <span>Data Analysis</span>
+                    <span>Backend</span>
+                </div>
+                <button class="apply-btn">Apply</button>
+            </div>
+        </div>
+        <div class="job-card">
+            <div class="job-content">
+                <h2 class="job-title">Front End Developer</h2>
+                <div class="company-details">
+                    <img src="assets/mastercard-logo.png" alt="IBM Logo" class="company-logo">
+                    <span class="company-name">MasterCard</span>
+                </div>
+                <div class="job-info">
+                    <span>4 - 7 Yrs</span>
+                    <span>20LPA</span>
+                    <span>Kolkata</span>
+                </div>
+                <div class="skills">
+                    <span>Software Development</span>
+                    <span>AWS</span>
+                    <span>Cybersecurity</span>
+                    <span>Fintech</span>
+                    <span>Product Management</span>
+                    <span>Digital Payments</span>
+                </div>
+                <button class="apply-btn">Apply</button>
+            </div>
+        </div>
+        <div class="job-card">
+            <div class="job-content">
+                <h2 class="job-title">Front End Developer</h2>
+                <div class="company-details">
+                    <img src="assets/amd-logo.png" alt="IBM Logo" class="company-logo">
+                    <span class="company-name">AMD</span>
+                </div>
+                <div class="job-info">
+                    <span>0 - 3 Yrs</span>
+                    <span>8LPA</span>
+                    <span>Mumbai</span>
+                </div>
+                <div class="skills">
+                    <span>Technical skills</span>
+                    <span>Hardware Design</span>
+                    <span>Graphics Programming</span>
+                    <span>AI/ML</span>
+                    <span>Analog Circuit Design</span>
+                    <span>Signal Integrity</span>
+                </div>
+                <button class="apply-btn">Apply</button>
+            </div>
+        </div>
+        <div class="job-card">
+            <div class="job-content">
+                <h2 class="job-title">Front End Developer</h2>
+                <div class="company-details">
+                    <img src="assets/netflix-logo.png" alt="IBM Logo" class="company-logo">
+                    <span class="company-name">Netflix</span>
+                </div>
+                <div class="job-info">
+                    <span>15 Yrs</span>
+                    <span>25LPA</span>
+                    <span>Delhi, Pune</span>
+                </div>
+                <div class="skills">
+                    <span>Big Data</span>
+                    <span>Frontend</span>
+                    <span>UI/UX</span>
+                    <span>AI/ML</span>
+                    <span>Content Creation</span>
+                    <span>Cybersecurity</span>
+                </div>
+                <button class="apply-btn">Apply</button>
+            </div>
+        </div>
+    </div>
+    
+    </body>
+</html>

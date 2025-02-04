@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="icon" href="./assets/logo.png">
+        <link rel="stylesheet" href="style-companies.css">
+        <title>IBM : Job Portal</title>
+    </head>
+    <body style="background: url(assets/IBM-bg.jpeg); background-position: top; background-size: contain; background-repeat: no-repeat;">
+        <div class="navbar">
+            <div class="nav-links">
+                <a href="index.html">Jobs</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="logo">
+                <img onclick="location.href='index.html'" src="#" alt="LOGO" />
+            </div>
+            <div class="nav-buttons">
+                <button id="login-button" onclick="openLoginForm()">Login</button>
+                <button id="signup-button" onclick="openSignupForm()">Sign up</button>
+            </div>
+        </div><div id="login-area">
+            <div class="login-form">
+                <form action="#">
+                    <img src="assets/close.png" id="close-form" alt="X Close" onclick="closeLoginForm()">
+                    <h2>Login</h2>
+                    <label for="email"><h3>Email</h3></label>
+                    <input type="email" name="email" id="login-email" placeholder="Enter your active Email ID">
+                    <label for="password"><h3>Password</h3></label>
+                    <input type="password" name="password" id="password" placeholder="Enter your password">
+                    <a href="#" id="forgot"><h6>Forgot password?</h6></a>
+                    <button type="submit" class="login-button login">Login</button>
+                    <br>
+                    <button type="submit" class="login-button use-otp">Use OTP to login</button>
+                    <hr>
+                    <button type="submit" class="login-google login-button"><img src="assets/google-logo.png" alt="google-logo" />Sign in with Google</button>
+                </form>
+            </div>
+        </div>
+        <div id="signup-area">
+            <div class="signup-form">
+                <form action="#">
+                    <img src="assets/close.png" id="close-form" alt="X Close" onclick="closeSignupForm()">
+                    <h2>Signup</h2>
+                    <label for="uname"><h3>Full Name</h3></label>
+                    <input type="text" name="uname" id="uname" placeholder="What is you name?">
+                    <label for="email"><h3>Email</h3></label>
+                    <input type="email" name="email" id="signup-email" placeholder="Enter your active Email ID">
+                    <label for="password"><h3>Password</h3></label>
+                    <input type="password" name="password" id="password" placeholder="Enter your password">
+                    <button type="submit" class="login-button signup">Login</button>
+                    <hr>
+                    <button type="submit" class="login-google login-button"><img src="assets/google-logo.png" alt="google-logo" />Sign in with Google</button>
+                </form>
+            </div>
+        </div>
+        <script>
+            function openLoginForm() {
+            document.getElementById("login-area").style.display = "flex";
+            }
+            
+            function closeLoginForm() {
+            document.getElementById("login-area").style.display = "none";
+            }
+
+            function openSignupForm() {
+            document.getElementById("signup-area").style.display = "flex";
+            }
+            
+            function closeSignupForm() {
+            document.getElementById("signup-area").style.display = "none";
+            }
+        </script>
+        <div class="main">
+            <div class="info">
+                <div class="company-logo"><img src="assets/ibm-logo.png" alt="google-logo"></div>
+                <div class="company-info">
+                    <div class="company-title">IBM</div>
+                    <div class="tagline">Secure your enterprise with the autonomous cybersecurity platform. Endpoint.</div>
+                    <div class="tag-space">
+                        <div class="tag">Internet</div>
+                        <div class="tag">IT service & Consulting</div>
+                    </div>
+                </div>
+            </div>
+            <div class="overview">
+                <h2>Overview</h2>
+                <hr>
+                <div class="about">
+                    <h3>About IBM</h3>
+                    IBM (International Business Machines Corporation) is a global technology company founded in 1911, known for its leadership 
+                    in innovation and business solutions. Headquartered in Armonk, New York, IBM originally began as a manufacturer of hardware 
+                    like mainframes and personal computers but has since evolved into a major player in software, cloud computing, artificial 
+                    intelligence (AI), and IT services.IBM’s major business areas include cloud computing (especially hybrid cloud solutions), 
+                    AI (with its Watson platform), quantum computing, data analytics, cybersecurity, and consulting services. The company helps 
+                    businesses across various industries adopt technology to solve complex problems and improve efficiency. Its Watson AI 
+                    platform, in particular, is renowned for its applications in healthcare, finance, and customer service.                
+                </div>
+                <div class="departments">
+                    <h3>Departments hiring at IBM</h3>
+                    <div class="card-holder">
+                        <div class="card" onclick="location.href='DataScientist.html'">Data<br />Scientist</div>
+                        <div class="card" onclick="location.href='itinfo.html'">IT & INFO<br />Security</div>
+                        <div class="card" onclick="location.href='CloudArchitect.html'">Cloud<br />Architect</div>
+                    </div>
+                </div>
+                <div class="benefits">
+                    <h3>Benefits reported by employees</h3>
+                    <div class="card-holder">
+                        <div class="card"><img src="assets/work-from-home.png" alt="work-from-home">Work from Home</div>
+                        <div class="card"><img src="assets/health-insurance.png" alt="health-insurance">Health Insurance</div>
+                        <div class="card"><img src="assets/cafeteria.png" alt="cafeteria">Cafeteria</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

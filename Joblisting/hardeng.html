@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="icon" href="./assets/logo.png">
+        <link rel="stylesheet" href="style-apply.css">
+        <title>Job Portal</title>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="nav-links">
+                <a href="index.html">Jobs</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="logo">
+                <img onclick="location.href='index.html'" src="#" alt="LOGO" />
+            </div>
+            <div class="nav-buttons">
+                <button id="login-button" onclick="openLoginForm()">Login</button>
+                <button id="signup-button" onclick="openSignupForm()">Sign up</button>
+            </div>
+        </div>
+        <div id="login-area">
+            <div class="login-form">
+                <form action="#">
+                    <img src="assets/close.png" id="close-form" alt="X Close" onclick="closeLoginForm()">
+                    <h2>Login</h2>
+                    <label for="email"><h3>Email</h3></label>
+                    <input type="email" name="email" id="login-email" placeholder="Enter your active Email ID">
+                    <label for="password"><h3>Password</h3></label>
+                    <input type="password" name="password" id="password" placeholder="Enter your password">
+                    <a href="#" id="forgot"><h6>Forgot password?</h6></a>
+                    <button type="submit" class="login-button login">Login</button>
+                    <br>
+                    <button type="submit" class="login-button use-otp">Use OTP to login</button>
+                    <hr>
+                    <button type="submit" class="login-google login-button"><img src="assets/google-logo.png" alt="google-logo" />Sign in with Google</button>
+                </form>
+            </div>
+        </div>
+        <div id="signup-area">
+            <div class="signup-form">
+                <form action="#">
+                    <img src="assets/close.png" id="close-form" alt="X Close" onclick="closeSignupForm()">
+                    <h2>Signup</h2>
+                    <label for="uname"><h3>Full Name</h3></label>
+                    <input type="text" name="uname" id="uname" placeholder="What is you name?">
+                    <label for="email"><h3>Email</h3></label>
+                    <input type="email" name="email" id="signup-email" placeholder="Enter your active Email ID">
+                    <label for="password"><h3>Password</h3></label>
+                    <input type="password" name="password" id="password" placeholder="Enter your password">
+                    <button type="submit" class="login-button signup">Login</button>
+                    <hr>
+                    <button type="submit" class="login-google login-button"><img src="assets/google-logo.png" alt="google-logo" />Sign in with Google</button>
+                </form>
+            </div>
+        </div>
+        <script>
+            function openLoginForm() {
+            document.getElementById("login-area").style.display = "flex";
+            }
+            
+            function closeLoginForm() {
+            document.getElementById("login-area").style.display = "none";
+            }
+
+            function openSignupForm() {
+            document.getElementById("signup-area").style.display = "flex";
+            }
+            
+            function closeSignupForm() {
+            document.getElementById("signup-area").style.display = "none";
+            }
+        </script>
+        <div class="main">
+            <h2>Hardware Engineer</h2>
+            <form action="#">
+                <div class="field-container">
+                    <div class="field">
+                        <label for="fname"><h3>First Name</h3></label>
+                        <input type="text" name="fname" id="fname" placeholder="Enter your first name">
+                    </div>
+                    <div class="field">
+                        <label for="lname"><h3>Last Name</h3></label>
+                        <input type="text" name="lname" id="lname" placeholder="Enter your last name">
+                    </div>
+                    <div class="field">
+                        <label for="email-apply"><h3>Email</h3></label>
+                        <input type="email" name="email-apply" id="email-apply" placeholder="Enter your active Email ID">
+                    </div>
+                    <div class="field">
+                        <label for="resume"><h3>Resume</h3><br /><img src="assets/upload.png" alt="Choose file"></label>
+                        <input type="file" name="resume" id="resume">
+                    </div>
+                    <div class="field" id="experience">
+                        <label for="experience"><h3>Experience</h3></label>
+                        <input type="text" name="experience" placeholder="In Years">
+                    </div>
+                </div>
+                <div class="apply">
+                    <hr />
+                    <button type="submit" id="apply">Apply</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
